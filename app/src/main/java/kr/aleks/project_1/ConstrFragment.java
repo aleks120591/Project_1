@@ -46,6 +46,9 @@ public class ConstrFragment extends Fragment {
         mTitleView = (TextView) v.findViewById(R.id.constr_title);
         mTitleView.setText(mConstr.getTitle());
 
+        mImageView = (ImageView) v.findViewById(R.id.constr_image);
+        mImageView.setImageResource(mConstr.getImage());
+
         mGrowthView = (TextView) v.findViewById(R.id.growth);
 
         mPlusTheIncreaseView = (TextView) v.findViewById(R.id.plus_the_increase);
