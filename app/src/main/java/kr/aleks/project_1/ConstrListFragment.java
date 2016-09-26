@@ -1,5 +1,6 @@
 package kr.aleks.project_1;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -8,6 +9,7 @@ import android.support.v7.widget.RecyclerView.Adapter;
 import android.support.v7.widget.RecyclerView.ViewHolder;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -30,14 +32,25 @@ public class ConstrListFragment extends Fragment {
         return view;
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        updateUI();
+    }
+
     private void updateUI() {
         ConstrLab constrLab = ConstrLab.get(getActivity());
         List<Constr> constrs = constrLab.getConstrs();
-        mAdapter = new ConstrAdapter(constrs);
-        mConstrRecyclerView.setAdapter(mAdapter);
+
+        if (mAdapter == null) {
+            mAdapter = new ConstrAdapter(constrs);
+            mConstrRecyclerView.setAdapter(mAdapter);
+        } else {
+            mAdapter.notifyDataSetChanged();
+        }
     }
 
-    private class ConstrHolder extends ViewHolder {
+    private class ConstrHolder extends ViewHolder implements OnClickListener {
 
         public TextView mTitleTextView;
         public ImageView mImageView;
@@ -46,6 +59,7 @@ public class ConstrListFragment extends Fragment {
 
         public ConstrHolder(View itemView) {
             super(itemView);
+            itemView.setOnClickListener(this);
 
             mTitleTextView = (TextView) itemView.findViewById(R.id.list_item_constr_title);
             mImageView = (ImageView) itemView.findViewById(R.id.list_item_constr_image);
@@ -56,6 +70,12 @@ public class ConstrListFragment extends Fragment {
             mConstr = constr;
             mTitleTextView.setText(mConstr.getTitle());
             mImageView.setImageResource(mConstr.getImage());
+        }
+
+        @Override
+        public void onClick(View view) {
+            Intent intent = ConstrActivity.newIntent(getActivity(), mConstr.getId());
+            startActivity(intent);
         }
     }
 

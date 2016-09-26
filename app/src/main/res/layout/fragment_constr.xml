@@ -18,19 +18,11 @@
 
     <TextView
         android:id="@+id/constr_title"
-        android:layout_width="136dp"
-        android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:text="@string/hut"
-        android:layout_alignTop="@+id/constr_image"
-        android:layout_toEndOf="@+id/constr_image"/>
-
-    <TextView
-        android:text="Небольшая лачуга из палок и веток, покрытая листьями, землянка и прочие мелкие постройки, вмещают небольшую семью."
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/description"
-        android:layout_alignBottom="@+id/constr_image"
+        android:textSize="18sp"
+        android:text=""
+        android:layout_alignTop="@+id/constr_image"
         android:layout_toEndOf="@+id/constr_image"/>
 
     <Button
@@ -39,34 +31,45 @@
         android:layout_height="wrap_content"
         android:text="@string/building"
         android:textSize="12dp"
-        android:layout_below="@+id/plus_the_increase"
-        android:layout_toEndOf="@+id/constr_title"/>
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="8dp"/>
 
     <TextView
         android:id="@+id/times_building"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="00:00:00"
-        android:layout_alignBaseline="@+id/plus_the_increase"
-        android:layout_alignBottom="@+id/plus_the_increase"
+        android:layout_marginStart="19dp"
+        android:layout_above="@+id/building"
         android:layout_alignStart="@+id/building"
-        android:layout_marginStart="17dp"/>
-
-    <TextView
-        android:id="@+id/growth"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ваш прирост: "
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/constr_image"
-        android:layout_alignEnd="@+id/constr_image"/>
+        android:layout_marginBottom="11dp"/>
 
     <TextView
         android:id="@+id/plus_the_increase"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="После постройки: "
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/growth"
-        android:layout_alignStart="@+id/growth"/>
+        android:layout_above="@+id/times_building"
+        android:layout_alignStart="@+id/growth"
+        android:layout_marginBottom="14dp"/>
+
+    <TextView
+        android:id="@+id/growth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ваш прирост: "
+        android:layout_above="@+id/plus_the_increase"
+        android:layout_alignEnd="@+id/constr_image"
+        android:layout_marginBottom="15dp"/>
+
+    <TextView
+        android:text="Небольшая лачуга из палок и веток, покрытая листьями, землянка и прочие мелкие постройки, вмещают небольшую семью."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/description"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/constr_image"
+        android:layout_alignParentStart="true"/>
 </RelativeLayout>
