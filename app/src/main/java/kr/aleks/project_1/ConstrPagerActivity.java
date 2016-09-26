@@ -1,5 +1,7 @@
 package kr.aleks.project_1;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -8,17 +10,28 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 
 import java.util.List;
+import java.util.UUID;
 
 public class ConstrPagerActivity extends FragmentActivity {
 
+    private static final String EXTRA_CONSTR_ID = "kr.aleks.project_1.constr_id";
+
     private ViewPager mViewPager;
     private List<Constr> mConstrs;
+
+    public static Intent newIntent(Context packageContext, UUID constrId) {
+        Intent intent = new Intent(packageContext, ConstrPagerActivity.class);
+        intent.putExtra(EXTRA_CONSTR_ID, constrId);
+        return intent;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_constr_pager);
+
+        UUID constrId = (UUID) getIntent().getSerializableExtra(EXTRA_CONSTR_ID);
 
         mViewPager = (ViewPager) findViewById(R.id.activity_constr_pager_view_pager);
         mConstrs = ConstrLab.get(this).getConstrs();
@@ -35,5 +48,11 @@ public class ConstrPagerActivity extends FragmentActivity {
                 return mConstrs.size();
             }
         });
+        for (int i = 0; i < mConstrs.size(); i++) {
+            if (mConstrs.get(i).getId().equals(constrId)) {
+                mViewPager.setCurrentItem(i);
+                break;
+            }
+        }
     }
 }

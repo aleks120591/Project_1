@@ -74,7 +74,7 @@ public class ConstrListFragment extends Fragment {
 
         @Override
         public void onClick(View view) {
-            Intent intent = ConstrActivity.newIntent(getActivity(), mConstr.getId());
+            Intent intent = ConstrPagerActivity.newIntent(getActivity(), mConstr.getId());
             startActivity(intent);
         }
     }
