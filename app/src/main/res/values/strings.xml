@@ -3,7 +3,7 @@
 
     <string name="build_title">Строить</string>
 
-    <string name="your_gain">Ваш прирост: 3 чел.</string>
+    <string name="your_gain">Ваш прирост: %d чел.</string>
 
     <string name="hut">Хижина</string>
     <string name="frame_house">Каркасный домик</string>

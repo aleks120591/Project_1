@@ -22,10 +22,12 @@ public class ConstrLab {
     private ConstrLab(Context context) {
         mConstrs = new ArrayList<>();
 
-        for (int i = 0; i < Constants.TITLES.length; i++) {
+        for (int i=0;i<Constants.TITLES.length;i++) {
             Constr constr = new Constr();
             constr.setTitle(Constants.TITLES[i]);
             constr.setImage(Constants.IMAGES[i]);
+            constr.setDescription(Constants.DESCRIPTION[i]);
+            constr.setGrowth(Constants.GROWTH[i]);
             mConstrs.add(constr);
         }
     }

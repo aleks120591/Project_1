@@ -56,20 +56,21 @@
         android:layout_marginBottom="14dp"/>
 
     <TextView
-        android:id="@+id/growth"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ваш прирост: "
-        android:layout_above="@+id/plus_the_increase"
-        android:layout_alignEnd="@+id/constr_image"
-        android:layout_marginBottom="15dp"/>
-
-    <TextView
-        android:text="Небольшая лачуга из палок и веток, покрытая листьями, землянка и прочие мелкие постройки, вмещают небольшую семью."
+        android:text=""
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/description"
         android:layout_marginTop="15dp"
         android:layout_below="@+id/constr_image"
         android:layout_alignParentStart="true"/>
+
+    <TextView
+        android:id="@+id/growth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_marginBottom="10dp"
+        android:layout_above="@+id/plus_the_increase"
+        android:layout_alignStart="@+id/constr_image"
+        android:layout_marginStart="10dp"/>
 </RelativeLayout>

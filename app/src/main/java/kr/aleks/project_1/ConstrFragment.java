@@ -19,6 +19,7 @@ public class ConstrFragment extends Fragment {
     private ImageView mImageView;
     private TextView mTitleView;
     private TextView mGrowthView;
+    private TextView mDescriptionView;
     private TextView mPlusTheIncreaseView;
     private TextView mTimerView;
     private Button mBuildingButton;
@@ -50,6 +51,10 @@ public class ConstrFragment extends Fragment {
         mImageView.setImageResource(mConstr.getImage());
 
         mGrowthView = (TextView) v.findViewById(R.id.growth);
+        mGrowthView.setText(mConstr.getGrowth());
+
+        mDescriptionView=(TextView)v.findViewById(R.id.description);
+        mDescriptionView.setText(mConstr.getDescription());
 
         mPlusTheIncreaseView = (TextView) v.findViewById(R.id.plus_the_increase);
 

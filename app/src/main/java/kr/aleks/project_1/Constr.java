@@ -8,6 +8,7 @@ public class Constr {
     private String mTitle;
     private int mImage;
     private String mGrowth;
+    private String mDescription;
     private String mPlusTheIncrease;
     private String mTimer;
 
@@ -37,6 +38,18 @@ public class Constr {
 
     public String getGrowth() {
         return mGrowth;
+    }
+
+    public void setGrowth(String growth) {
+        mGrowth = growth;
+    }
+
+    public String getDescription() {
+        return mDescription;
+    }
+
+    public void setDescription(String description) {
+        mDescription = description;
     }
 
     public String getPlusTheIncrease() {
