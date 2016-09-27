@@ -53,7 +53,7 @@ public class ConstrFragment extends Fragment {
         mGrowthView = (TextView) v.findViewById(R.id.growth);
         mGrowthView.setText(mConstr.getGrowth());
 
-        mDescriptionView=(TextView)v.findViewById(R.id.description);
+        mDescriptionView = (TextView) v.findViewById(R.id.description);
         mDescriptionView.setText(mConstr.getDescription());
 
         mPlusTheIncreaseView = (TextView) v.findViewById(R.id.plus_the_increase);
@@ -61,7 +61,19 @@ public class ConstrFragment extends Fragment {
         mTimerView = (TextView) v.findViewById(R.id.times_building);
 
         mBuildingButton = (Button) v.findViewById(R.id.building);
+        mBuildingButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
+            }
+        });
         return v;
     }
+
+    private Runnable timeTick = new Runnable() {
+        @Override
+        public void run() {
+
+        }
+    };
 }

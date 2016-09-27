@@ -13,6 +13,8 @@
     <string name="house_unit">Дом из блока</string>
     <string name="estate">Имение</string>
     <string name="farmstead">Усадьба</string>
+    <string name="stock">Склад</string>
+    <string name="market">Рынок</string>
     <string name="quarry">Каменоломня</string>
     <string name="smithy">Кузница</string>
     <string name="mines">Горное управление</string>
