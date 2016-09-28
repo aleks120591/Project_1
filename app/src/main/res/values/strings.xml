@@ -40,4 +40,5 @@
 
     <string name="building">Построить</string>
     <string name="action_settings">Настройки</string>
+    <string name="new_constr">New Constr</string>
 </resources>
