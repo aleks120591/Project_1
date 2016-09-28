@@ -1,6 +1,8 @@
 package kr.aleks.project_1;
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.SystemClock;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -64,7 +66,8 @@ public class ConstrFragment extends Fragment {
         mBuildingButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                startTime = SystemClock.uptimeMillis();
+                customHandler.postDelayed(timeTick, 0);
             }
         });
         return v;
@@ -73,7 +76,25 @@ public class ConstrFragment extends Fragment {
     private Runnable timeTick = new Runnable() {
         @Override
         public void run() {
+            timeInMilliseconds = SystemClock.uptimeMillis() - startTime;
+            updatedTime = timeSwapBuff - timeInMilliseconds;
 
+            int secs = (int) (updatedTime / 1000);
+            int mins = (secs / 60);
+            int hour = (int) (mins * 60);
+            secs = secs % 60;
+            int milliseconds = (int) (updatedTime % 1000);
+            mTimerView.setText(""
+                    + String.format("%02d", hour) + ":"
+                    + String.format("%02d", mins) + ":"
+                    + String.format("%02d", secs));
+            customHandler.postDelayed(this, 0);
         }
     };
+
+    private long startTime = 0L;
+    private Handler customHandler = new Handler();
+    long timeInMilliseconds = 0L;
+    long timeSwapBuff = 0L;
+    long updatedTime = 0L;
 }
