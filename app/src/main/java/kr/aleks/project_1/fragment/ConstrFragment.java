@@ -1,4 +1,4 @@
-package kr.aleks.project_1;
+package kr.aleks.project_1.fragment;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -12,6 +12,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.UUID;
+
+import kr.aleks.project_1.Constr;
+import kr.aleks.project_1.ConstrLab;
+import kr.aleks.project_1.R;
 
 public class ConstrFragment extends Fragment {
 

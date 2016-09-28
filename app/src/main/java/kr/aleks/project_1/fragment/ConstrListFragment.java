@@ -1,4 +1,4 @@
-package kr.aleks.project_1;
+package kr.aleks.project_1.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,6 +15,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
+
+import kr.aleks.project_1.Constr;
+import kr.aleks.project_1.ConstrLab;
+import kr.aleks.project_1.activity.ConstrPagerActivity;
+import kr.aleks.project_1.R;
 
 public class ConstrListFragment extends Fragment {
 

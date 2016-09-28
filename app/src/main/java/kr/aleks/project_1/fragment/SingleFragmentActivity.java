@@ -1,9 +1,11 @@
-package kr.aleks.project_1;
+package kr.aleks.project_1.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
+
+import kr.aleks.project_1.R;
 
 public abstract class SingleFragmentActivity extends AppCompatActivity{
 

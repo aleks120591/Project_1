@@ -1,4 +1,4 @@
-package kr.aleks.project_1;
+package kr.aleks.project_1.activity;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,6 +11,11 @@ import android.support.v7.app.AppCompatActivity;
 
 import java.util.List;
 import java.util.UUID;
+
+import kr.aleks.project_1.Constr;
+import kr.aleks.project_1.ConstrLab;
+import kr.aleks.project_1.R;
+import kr.aleks.project_1.fragment.ConstrFragment;
 
 public class ConstrPagerActivity extends AppCompatActivity {
 

@@ -1,10 +1,13 @@
-package kr.aleks.project_1;
+package kr.aleks.project_1.activity;
 
 import android.content.Context;
 import android.content.Intent;
 import android.support.v4.app.Fragment;
 
 import java.util.UUID;
+
+import kr.aleks.project_1.fragment.ConstrFragment;
+import kr.aleks.project_1.fragment.SingleFragmentActivity;
 
 public class ConstrActivity extends SingleFragmentActivity {
 
