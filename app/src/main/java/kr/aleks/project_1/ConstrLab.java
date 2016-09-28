@@ -1,5 +1,6 @@
 package kr.aleks.project_1;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 
@@ -8,6 +9,7 @@ import java.util.List;
 import java.util.UUID;
 
 import kr.aleks.project_1.database.ConstrBaseHelper;
+import kr.aleks.project_1.database.ConstrDbSchema.ConstrTable;
 
 public class ConstrLab {
 
@@ -51,5 +53,16 @@ public class ConstrLab {
             }
         }
         return null;
+    }
+
+    private static ContentValues getContentValues(Constr constr) {
+        ContentValues values = new ContentValues();
+        values.put(ConstrTable.Cols.UUID, constr.getId().toString());
+        values.put(ConstrTable.Cols.TITLE, constr.getTitle().toString());
+        values.put(ConstrTable.Cols.GROWTH, constr.getGrowth().toString());
+        values.put(ConstrTable.Cols.DESCRIPTION, constr.getDescription().toString());
+        values.put(ConstrTable.Cols.PLUS_THE_INCREASE, constr.getPlusTheIncrease().toString());
+        values.put(ConstrTable.Cols.TITLE, constr.getTimer().toString());
+        return values;
     }
 }
