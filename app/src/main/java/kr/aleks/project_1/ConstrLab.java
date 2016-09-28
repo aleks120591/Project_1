@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-import kr.aleks.project_1.database.ConstrBaseHelper;
 import kr.aleks.project_1.database.ConstrDbSchema.ConstrTable;
 
 public class ConstrLab {
@@ -27,9 +26,9 @@ public class ConstrLab {
     }
 
     private ConstrLab(Context context) {
-        mContext = context.getApplicationContext();
+        /*mContext = context.getApplicationContext();
         mDatabase = new ConstrBaseHelper(mContext)
-                .getWritableDatabase();
+                .getWritableDatabase();*/
         mConstrs = new ArrayList<>();
 
         for (int i = 0; i < Constants.TITLES.length; i++) {

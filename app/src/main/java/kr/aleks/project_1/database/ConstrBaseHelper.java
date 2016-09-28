@@ -4,8 +4,6 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import kr.aleks.project_1.database.ConstrDbSchema.ConstrTable;
-
 public class ConstrBaseHelper extends SQLiteOpenHelper {
 
     private static final int VERSION = 1;
@@ -17,7 +15,7 @@ public class ConstrBaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table " + ConstrTable.CONSTR_NAME + "(" +
+        /*db.execSQL("create table " + ConstrTable.CONSTR_NAME + "(" +
                 " _id integer primary key autoincrement, " +
                 ConstrTable.Cols.UUID + ", " +
                 ConstrTable.Cols.TITLE + ", " +
@@ -25,7 +23,7 @@ public class ConstrBaseHelper extends SQLiteOpenHelper {
                 ConstrTable.Cols.DESCRIPTION + ", " +
                 ConstrTable.Cols.PLUS_THE_INCREASE + ", " +
                 ConstrTable.Cols.TIMER
-        );
+        );*/
     }
 
     @Override

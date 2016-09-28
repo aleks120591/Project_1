@@ -41,4 +41,6 @@
     <string name="building">Построить</string>
     <string name="action_settings">Настройки</string>
     <string name="new_constr">New Constr</string>
+    <string name="menu_item_home">Постройки / Ресурсы</string>
+    <string name="search_title">search</string>
 </resources>

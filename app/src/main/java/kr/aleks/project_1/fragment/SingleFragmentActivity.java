@@ -7,12 +7,13 @@ import android.support.v7.app.AppCompatActivity;
 
 import kr.aleks.project_1.R;
 
-public abstract class SingleFragmentActivity extends AppCompatActivity{
+public abstract class SingleFragmentActivity extends AppCompatActivity {
 
     protected abstract Fragment createFragment();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.AppDefault);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fragment);
 
