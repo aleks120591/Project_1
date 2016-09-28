@@ -66,8 +66,8 @@ public class ConstrFragment extends Fragment {
         mBuildingButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startTime = SystemClock.uptimeMillis();
-                customHandler.postDelayed(timeTick, 0);
+                /*startTime = SystemClock.uptimeMillis();
+                customHandler.postDelayed(timeTick, 0);*/
             }
         });
         return v;
